@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accessibility Course Overview</title>
+  <link rel="stylesheet" href="project2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="project2.js"></script>
+</head>
+<body>
+</html>
+
+<!-- Added ARIA landmark for main content -->
+<div role="main">
+  
+  <!-- Added main page heading -->
+  <h1>Accessibility Course Overview</h1>
+
+  <div class="offscreen">Main Content</div>
+  <div class="container">
+    
+    <!-- Added ARIA landmark for navigation -->
+    <nav aria-label="Main navigation">
+      <!-- Added heading for navigation -->
+      <h2>Navigation</h2>
+      <div class="navigation">
+        <a href="index.html#home">
+          <img src="pics/home.png" alt="Home">
+        </a>
+        <a href="#links">
+          <img src="pics/links.png" alt="Useful Links">
+        </a>
+        <a href="#signup">
+          <img src="pics/signup.png" alt="Sign Up">
+        </a>
+      </div>
+    </nav>
+
+    <div id="accessibilitybanner"></div>
+
+    <!-- Added heading for video section -->
+    <h2>Training Video</h2>
+    <iframe width="480" height="360" id="thevideo" 
+        src="https://www.youtube.com/embed/E3c2sQfy0XU?enablejsapi=1" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+
+    <div id="videoplayer">
+      <img width="50px" height="50px" src="pics/play.png" alt="Play Video">
+    </div>
+
+    <!-- Added heading for links section -->
+    <h2 id="links">Links</h2>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.barnardhci.com" style="opacity: 1; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);">
+      Accessibility Research at Hamilton</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.hamilton.edu/offices/dos/accessibility" style="opacity: 1; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);">
+      Disability Services at Hamilton</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://xkcd.com/" style="opacity: 1; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);">
+      XKCD</a><br>
+    <img src="pics/dot.png" alt="dot">&nbsp;<a href="https://www.youtube.com/watch?v=HtTyRajRuyY" style="opacity: 1; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255);" aria-label="A11ycasts Videos with captions available">
+      A11ycasts Videos</a>
+
+    <!-- Added heading for sign-up section -->
+    <h2 id="signup">Sign Up!</h2>
+    <form id="sign-up-form">
+      <p>
+        <label for="fn">First Name:</label>  
+        <input name="fn" type="text" size="10" id="fn"> 
+        <label for="mi">Middle Initial:</label>  
+        <input name="mi" type="text" size="1" id="mi">. 
+        <label for="ln">Last Name:</label>
+        <input name="ln" type="text" size="10" id="ln"><br>
+      </p>
+      <p>
+        <label for="em">Email:</label> 
+        <input id="em" name="em" type="text" size="20">
+      </p>
+      <p>
+        <span id="spamtext">Would you like to receive occasional emails with offers from us?</span>
+        <div id="receivespambutton">
+          <img src="pics/checked.png" alt="checkbox">
+        </div>
+        <input type="hidden" id="spamyn" name="spamyn" value="n">
+      </p>
+      <p>
+        <label for="comments">Comments:</label>
+        <br>
+        <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+      </p>
+      <input type="button" id="signupbutton" name="signupbutton" value="Sign Up!">
+    </form>
+
+  </div><!-- end div.container -->
+</div><!-- end role="main" -->
+</body>
+</html>
